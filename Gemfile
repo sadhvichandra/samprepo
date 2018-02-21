@@ -1,0 +1,13 @@
+source 'https://rubygems.org'
+gem 'sinatra'
+gem 'thin'
+#gem 'yaml'
+gem 'pry'
+gem 'pry-byebug'
+gem 'json'
+gem 'logger'
+gem 'httparty'
+gem 'slack-ruby-client'
+gem 'eventmachine'
+gem 'faye-websocket'
+
