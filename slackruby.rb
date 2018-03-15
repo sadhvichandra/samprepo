@@ -15,6 +15,7 @@ post '/testcall' do
   a = request.params['text']
   b = request.params['trigger_word']
   c = a.strip!
+	
   h = c.slice! b
  
   
