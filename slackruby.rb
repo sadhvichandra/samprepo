@@ -14,7 +14,10 @@ post '/testcall' do
 
   a = request.params['text']
   b = request.params['trigger_word']
+  c = ' '
   h = a.slice! b
+  h = h.slice! c
+  
   url = URI("https://geapplight.service-now.com/api/now/v1/table/cmdb_ci_service?sysparm_query=name%3D#{a}&sysparm_fields=u_technical_contact_sso_1&displayvalue=true")
   http = Net::HTTP.new(url.host, url.port)
   http.use_ssl = true
