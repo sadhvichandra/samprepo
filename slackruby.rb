@@ -14,8 +14,8 @@ post '/testcall' do
 
   a = request.params['text']
   b = request.params['trigger_word']
-  a = a.strip!
-  h = a.slice! b
+  c = a.strip!
+  h = c.slice! b
  
   
   url = URI("https://geapplight.service-now.com/api/now/v1/table/cmdb_ci_service?sysparm_query=name%3D#{a}&sysparm_fields=u_technical_contact_sso_1&displayvalue=true")
