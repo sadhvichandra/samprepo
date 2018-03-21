@@ -46,7 +46,7 @@ post '/testcall' do
   httpl.verify_mode = OpenSSL::SSL::VERIFY_NONE
   requestl = Net::HTTP::Get.new(urll)
   requestl["authorization"] = 'Basic NTAyNDEyMjMyOlMzcnZpYzNuMHc='
-  responsel = http.requestl(requestl)
+  responsel = httpl.request(requestl)
   data1l = JSON.parse(responsel.read_body)
   url2l = idvalue = data1l['result'][0]['u_technical_contact_sso_2']["link"]
   urll = URI(url2l)
@@ -55,7 +55,7 @@ post '/testcall' do
   httpl.verify_mode = OpenSSL::SSL::VERIFY_NONE
   requestl = Net::HTTP::Get.new(urll)
   requestl["authorization"] = 'Basic NTAyNDEyMjMyOlMzcnZpYzNuMHc='
-  responsel = http.requestl(requestl)
+  responsel = httpl.request(requestl)
   jsonresultl = JSON.parse(responsel.body)
   result1l = jsonresultl['result']['u_display_name']
   finalresult = result1 + result1l
