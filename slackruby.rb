@@ -37,9 +37,9 @@ post '/testcall' do
   response = http.request(request)
   jsonresult = JSON.parse(response.body)
   result1 = jsonresult['result']['u_display_name']
-  //content_type :json
-  //{:text => "#{result1}"}.to_json
-  //passing second url
+  #content_type :json
+  #{:text => "#{result1}"}.to_json
+  #passing second url
     urll = URI("https://geapplight.service-now.com/api/now/v1/table/cmdb_ci_service?sysparm_query=name%3D#{a}&sysparm_fields=u_technical_contact_sso_2&displayvalue=true")
   httpl = Net::HTTP.new(urll.host, urll.port)
   httpl.use_ssl = true
